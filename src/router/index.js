@@ -39,8 +39,11 @@ router.beforeEach(async (to, from, next) => {
   if(user !== undefined){
     isAuthenticated = true
   }
+  
   if (to.name !== 'Login' && !isAuthenticated) next({ name: 'Login' })
+  if (to.name === 'Login' && isAuthenticated) next({ name: 'Home' })
   else next()
+
 })
 
 

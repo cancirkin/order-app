@@ -11,7 +11,7 @@
     name: 'App',
     data () {
       return {
-        drawer: false,
+        
       }
     },
   }
