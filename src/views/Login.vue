@@ -93,7 +93,7 @@
               
               const user = userCredential.user;
               this.setCookie(user);
-              this.$router.push({name: 'Home'});
+              this.$router.push({name: 'Dashboard'});
             })
             .catch((error) => {
               const errorCode = error.code;

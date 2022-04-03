@@ -9,15 +9,18 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "chart.js": "^3.7.1",
     "core-js": "^3.6.5",
     "firebase": "^9.6.10",
     "js-cookie": "^3.0.1",
     "vue": "^2.6.11",
+    "vue-chartjs": "^4.0.4",
     "vue-router": "^3.2.0",
     "vuetify": "^2.6.0",
     "vuex": "3.1.1"
   },
   "devDependencies": {
+    "@mdi/font": "^6.6.96",
     "@vue/cli-plugin-babel": "~4.5.15",
     "@vue/cli-plugin-eslint": "~4.5.15",
     "@vue/cli-plugin-router": "~4.5.15",

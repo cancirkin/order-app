@@ -1,8 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
+import Dashboard from '../views/Dashboard.vue'
+import NewOrder from '../views/NewOrder.vue'
+import Orders from '../views/Orders.vue'
+import Cooking from '../views/Cooking.vue'
+import Ready from '../views/Ready.vue'
+import Completed from '../views/Completed.vue'
 import Login from '../views/Login.vue'
+import AppLayout from '../layouts/AppLayout.vue'
+import SimpleLayout from '../layouts/SimpleLayout.vue'
 import Cookies from 'js-cookie'
 
 Vue.use(VueRouter)
@@ -10,18 +16,51 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: About
+    component: AppLayout,
+    children: [
+      {
+        name: 'Dashboard',
+        path: '',
+        component: Dashboard,
+      },
+      {
+        name: 'NewOrder',
+        path: 'new-order',
+        component: NewOrder,
+      },
+      {
+        name: 'Orders',
+        path: 'orders',
+        component: Orders,
+      },
+      {
+        name: 'Cooking',
+        path: 'cooking',
+        component: Cooking,
+      },
+      {
+        name: 'Ready',
+        path: 'ready',
+        component: Ready,
+      },
+      {
+        name: 'Completed',
+        path: 'completed',
+        component: Completed,
+      },
+    ]
+    
   },
   {
     path: '/login',
-    name: 'Login',
-    component: Login
+    component: SimpleLayout,
+    children: [
+      {
+        name: 'Login',
+        path: '',
+        component: Login,
+      },
+    ]
   }
 ] 
 
